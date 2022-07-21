@@ -139,8 +139,6 @@
 			isa = PBXGroup;
 			children = (
 				B9DED7A9288988F9008F8774 /* Swift-TodoNotes */,
-				B9DED7A4288988F9008F8774 /* Swift-TodoNotesTests */,
-				B9DED7A6288988F9008F8774 /* Swift-TodoNotesUITests */,
 				8E5845FB2832D4FD00E4CAD3 /* Products */,
 				01C258BA05CC4E30871DF6B6 /* Pods */,
 				FC8434B4096B8CFE7575C839 /* Frameworks */,
@@ -157,27 +155,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9DED7A4288988F9008F8774 /* Swift-TodoNotesTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Swift-TodoNotesTests";
-			sourceTree = "<group>";
-		};
-		B9DED7A6288988F9008F8774 /* Swift-TodoNotesUITests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Swift-TodoNotesUITests";
-			sourceTree = "<group>";
-		};
 		B9DED7A9288988F9008F8774 /* Swift-TodoNotes */ = {
 			isa = PBXGroup;
 			children = (
 				B9DED7AA288988F9008F8774 /* Swift-TodoNotes.entitlements */,
 				B9DED7AB288988F9008F8774 /* Resources */,
 				B9DED7B5288988F9008F8774 /* notes.xcdatamodeld */,
-				B9DED7B7288988F9008F8774 /* Model */,
 				B9DED7B8288988F9008F8774 /* View */,
 				B9DED7CA288988F9008F8774 /* AppDelegate.swift */,
 				B9DED7CB288988F9008F8774 /* View Model */,
@@ -207,13 +190,6 @@
 				B9DED7B3288988F9008F8774 /* Montserrat-Regular.ttf */,
 			);
 			path = Fonts;
-			sourceTree = "<group>";
-		};
-		B9DED7B7288988F9008F8774 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B9DED7B8288988F9008F8774 /* View */ = {
