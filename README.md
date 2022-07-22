@@ -15,7 +15,9 @@ I hope you'll learn something new and use these and concepts to achieve great ef
 Step 1: Open Terminal and go to up to project path 
 
 Step 2: Type below command in terminal
-> pod install
+```
+pod install
+```
 
 Step 3: Open **Swift-TodoNotes.xcworkspace**
 
@@ -27,7 +29,7 @@ Step 3: Open **Swift-TodoNotes.xcworkspace**
 
 
 
-### 📫 Reach me for any questions :point_down::
-![LinkedIn_icon](https://user-images.githubusercontent.com/56787966/180370632-2e91f9be-1d3d-418d-99ba-9e33ebf7bd38.png)(https://www.linkedin.com/in/saumil-shah-b954b9101/) 
+## 📫 Reach me for any questions/suggestion :point_down::
+[![LinkedInIcon](https://user-images.githubusercontent.com/56787966/180372874-fd85a898-5750-4b51-a39d-bf552e321eb4.png)](https://www.linkedin.com/in/saumil-shah-b954b9101/)
 
-Also if you find any bugs or suggestion then feel free to create pull request.
+Please feel free to create pull request.
