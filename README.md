@@ -27,9 +27,30 @@ Step 3: Open **Swift-TodoNotes.xcworkspace**
 
 - Database: Coredata and Sqlite
 
+- Xcode Version: Xcode 13 and later
 
+## Key features
+
+- Add Notes/Todos/Action plan.
+
+- Edit Notes.
+
+- Delete Notes.
+
+- Save Notes in Local Storage.
+
+- Supported with Landscape and Portrait mode.
+
+- Supported with iPhone and iPad all newer devices.
+
+## Usage
+![1](https://user-images.githubusercontent.com/56787966/180401513-fedbc286-6561-44b2-bd4b-e7d371c5aab5.png)
 
 ## 📫 Reach me for any questions/suggestion :point_down::
 [![LinkedInIcon](https://user-images.githubusercontent.com/56787966/180372874-fd85a898-5750-4b51-a39d-bf552e321eb4.png)](https://www.linkedin.com/in/saumil-shah-b954b9101/)
 
 Please feel free to create pull request.
+
+## License
+
+Swift-TodoNotes is written in Swift 5 and is open source.
