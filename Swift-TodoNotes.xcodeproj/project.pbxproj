@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		25D3CAEDD873C1E92E885218 /* Pods_Swift_TodoNotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD9640690AA0B8293BDAF4 /* Pods_Swift_TodoNotesTests.framework */; };
 		70CBFC9677A63008772D883E /* Pods_Swift_TodoNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE67D64BB4BE566B70B46204 /* Pods_Swift_TodoNotes.framework */; };
+		8E5C0892288ED0C80050AF45 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C0891288ED0C80050AF45 /* Note.swift */; };
+		8EA56E7C288FA5BE0090D0A2 /* NoteListController+TableView+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA56E7B288FA5BE0090D0A2 /* NoteListController+TableView+Delegates.swift */; };
+		8EA56E7E288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA56E7D288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift */; };
+		8EA56E83288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA56E82288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift */; };
+		8EA56E85288FB7340090D0A2 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA56E84288FB7340090D0A2 /* Enumeration.swift */; };
+		8EAF9B6128911A4B00016F9A /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF9B6028911A4B00016F9A /* UIApplication+Extension.swift */; };
+		8EAF9BDB2891700A00016F9A /* NoteListController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF9BDA2891700A00016F9A /* NoteListController+Appearance.swift */; };
+		8EAF9BDE2891706400016F9A /* AddNoteViewController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF9BDD2891706400016F9A /* AddNoteViewController+Appearance.swift */; };
 		B9DED7D4288988F9008F8774 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DED7AC288988F9008F8774 /* Colors.xcassets */; };
 		B9DED7D5288988F9008F8774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DED7AD288988F9008F8774 /* Assets.xcassets */; };
 		B9DED7D6288988F9008F8774 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9DED7AF288988F9008F8774 /* Montserrat-Medium.ttf */; };
@@ -62,6 +70,14 @@
 		8E5845FA2832D4FD00E4CAD3 /* Swift-TodoNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-TodoNotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5846102832D4FE00E4CAD3 /* Swift-TodoNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-TodoNotesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E58461A2832D4FE00E4CAD3 /* Swift-TodoNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-TodoNotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E5C0891288ED0C80050AF45 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		8EA56E7B288FA5BE0090D0A2 /* NoteListController+TableView+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteListController+TableView+Delegates.swift"; sourceTree = "<group>"; };
+		8EA56E7D288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteListController+AddNote+Delegates.swift"; sourceTree = "<group>"; };
+		8EA56E82288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNoteViewController+TextView+Delegates.swift"; sourceTree = "<group>"; };
+		8EA56E84288FB7340090D0A2 /* Enumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
+		8EAF9B6028911A4B00016F9A /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		8EAF9BDA2891700A00016F9A /* NoteListController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteListController+Appearance.swift"; sourceTree = "<group>"; };
+		8EAF9BDD2891706400016F9A /* AddNoteViewController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNoteViewController+Appearance.swift"; sourceTree = "<group>"; };
 		9590D22F6D387BB2EE75446E /* Pods-Swift-TodoNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-TodoNotes.release.xcconfig"; path = "Target Support Files/Pods-Swift-TodoNotes/Pods-Swift-TodoNotes.release.xcconfig"; sourceTree = "<group>"; };
 		AEDF4337B9944747B633F21A /* Pods-Swift-TodoNotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-TodoNotesTests.debug.xcconfig"; path = "Target Support Files/Pods-Swift-TodoNotesTests/Pods-Swift-TodoNotesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9DED7AA288988F9008F8774 /* Swift-TodoNotes.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "Swift-TodoNotes.entitlements"; sourceTree = "<group>"; };
@@ -155,16 +171,77 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8E5C0890288ED0BC0050AF45 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E5C0891288ED0C80050AF45 /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EA56E7A288FA59E0090D0A2 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				8EA56E7B288FA5BE0090D0A2 /* NoteListController+TableView+Delegates.swift */,
+				8EA56E7D288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		8EA56E7F288FAAD60090D0A2 /* NotesList */ = {
+			isa = PBXGroup;
+			children = (
+				8EAF9BD928916FE000016F9A /* Extension */,
+				8EA56E7A288FA59E0090D0A2 /* Delegate */,
+				B9DED7C8288988F9008F8774 /* NoteListController.swift */,
+			);
+			path = NotesList;
+			sourceTree = "<group>";
+		};
+		8EA56E80288FAAEC0090D0A2 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				8EAF9BDC2891705000016F9A /* Extension */,
+				8EA56E81288FAAF90090D0A2 /* Delegate */,
+				B9DED7C9288988F9008F8774 /* AddNoteViewController.swift */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		8EA56E81288FAAF90090D0A2 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				8EA56E82288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
+		8EAF9BD928916FE000016F9A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8EAF9BDA2891700A00016F9A /* NoteListController+Appearance.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8EAF9BDC2891705000016F9A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8EAF9BDD2891706400016F9A /* AddNoteViewController+Appearance.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B9DED7A9288988F9008F8774 /* Swift-TodoNotes */ = {
 			isa = PBXGroup;
 			children = (
 				B9DED7AA288988F9008F8774 /* Swift-TodoNotes.entitlements */,
-				B9DED7AB288988F9008F8774 /* Resources */,
+				8E5C0890288ED0BC0050AF45 /* Model */,
+				B9DED7CB288988F9008F8774 /* View Model */,
 				B9DED7B5288988F9008F8774 /* notes.xcdatamodeld */,
 				B9DED7B8288988F9008F8774 /* View */,
-				B9DED7CA288988F9008F8774 /* AppDelegate.swift */,
-				B9DED7CB288988F9008F8774 /* View Model */,
 				B9DED7CD288988F9008F8774 /* Helpers */,
+				B9DED7AB288988F9008F8774 /* Resources */,
 			);
 			path = "Swift-TodoNotes";
 			sourceTree = "<group>";
@@ -172,10 +249,10 @@
 		B9DED7AB288988F9008F8774 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B9DED7B4288988F9008F8774 /* Info.plist */,
+				B9DED7AE288988F9008F8774 /* Fonts */,
 				B9DED7AC288988F9008F8774 /* Colors.xcassets */,
 				B9DED7AD288988F9008F8774 /* Assets.xcassets */,
-				B9DED7AE288988F9008F8774 /* Fonts */,
-				B9DED7B4288988F9008F8774 /* Info.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -195,10 +272,11 @@
 		B9DED7B8288988F9008F8774 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B9DED7CA288988F9008F8774 /* AppDelegate.swift */,
+				B9DED7C7288988F9008F8774 /* Controllers */,
+				B9DED7C2288988F9008F8774 /* Storyboard */,
 				B9DED7B9288988F9008F8774 /* XIBs */,
 				B9DED7BC288988F9008F8774 /* Extension */,
-				B9DED7C2288988F9008F8774 /* Storyboard */,
-				B9DED7C7288988F9008F8774 /* Controllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +298,7 @@
 				B9DED7BF288988F9008F8774 /* UIView+Extension.swift */,
 				B9DED7C0288988F9008F8774 /* UIColor+CustomColor.swift */,
 				B9DED7C1288988F9008F8774 /* UITextView+Extension.swift */,
+				8EAF9B6028911A4B00016F9A /* UIApplication+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -236,8 +315,8 @@
 		B9DED7C7288988F9008F8774 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B9DED7C8288988F9008F8774 /* NoteListController.swift */,
-				B9DED7C9288988F9008F8774 /* AddNoteViewController.swift */,
+				8EA56E80288FAAEC0090D0A2 /* AddNote */,
+				8EA56E7F288FAAD60090D0A2 /* NotesList */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +335,7 @@
 				B9DED7CE288988F9008F8774 /* CoreDataManager.swift */,
 				B9DED7CF288988F9008F8774 /* StringConstants.swift */,
 				B9DED7D0288988F9008F8774 /* Storyboard.swift */,
+				8EA56E84288FB7340090D0A2 /* Enumeration.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -519,16 +599,24 @@
 				B9DED7E9288988FA008F8774 /* NoteViewModel.swift in Sources */,
 				B9DED7E6288988FA008F8774 /* NoteListController.swift in Sources */,
 				B9DED7DF288988F9008F8774 /* UIFont+Extension.swift in Sources */,
+				8EAF9BDB2891700A00016F9A /* NoteListController+Appearance.swift in Sources */,
+				8EAF9BDE2891706400016F9A /* AddNoteViewController+Appearance.swift in Sources */,
 				B9DED7EC288988FA008F8774 /* Storyboard.swift in Sources */,
+				8EA56E7C288FA5BE0090D0A2 /* NoteListController+TableView+Delegates.swift in Sources */,
 				B9DED7EA288988FA008F8774 /* CoreDataManager.swift in Sources */,
+				8E5C0892288ED0C80050AF45 /* Note.swift in Sources */,
+				8EA56E83288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift in Sources */,
 				B9DED7EB288988FA008F8774 /* StringConstants.swift in Sources */,
 				B9DED7E2288988FA008F8774 /* UIColor+CustomColor.swift in Sources */,
+				8EA56E85288FB7340090D0A2 /* Enumeration.swift in Sources */,
 				B9DED7E3288988FA008F8774 /* UITextView+Extension.swift in Sources */,
 				B9DED7E1288988F9008F8774 /* UIView+Extension.swift in Sources */,
 				B9DED7E8288988FA008F8774 /* AppDelegate.swift in Sources */,
+				8EA56E7E288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift in Sources */,
 				B9DED7E7288988FA008F8774 /* AddNoteViewController.swift in Sources */,
 				B9DED7E0288988F9008F8774 /* Date+Extension.swift in Sources */,
 				B9DED7DC288988F9008F8774 /* notes.xcdatamodeld in Sources */,
+				8EAF9B6128911A4B00016F9A /* UIApplication+Extension.swift in Sources */,
 				B9DED7DD288988F9008F8774 /* NotePreviewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

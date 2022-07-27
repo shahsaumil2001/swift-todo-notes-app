@@ -1,15 +1,16 @@
-
 import UIKit
 
 extension UIView {
+
     static var staticIdentifier: String {
         return String(describing: self)
     }
-
     static func instanceFromNib() -> UIView? {
         return UINib(nibName: staticIdentifier, bundle: nil).instantiate(withOwner: nil, options: nil)[0] as? UIView
     }
-
+    ///
+    /// The extension is `cornerRadius` which is used to apply corener radius to View
+    /// A View extension's `cornerRadius` method
     func cornerRadius(radius: CGFloat) {
         self.layer.cornerRadius = radius
         self.clipsToBounds = true
@@ -48,7 +49,6 @@ extension UIView {
         self.layer.shadowRadius = shadowRadius
         self.layer.cornerRadius = cornerRadius
     }
-
     ///
     /// The extension is `addCornerRadiusWithShadow` which is used to corner with shadow
     /// A View extension's `addCornerRadiusWithShadow` method
@@ -62,13 +62,18 @@ extension UIView {
         self.layer.borderWidth = 1.0
         self.layer.masksToBounds = false
     }
-
+    ///
+    /// The extension is `setCornerRadiusWith` which is used apply corner radius with bprder width & border color to View
+    /// A View extension's `setCornerRadiusWith` method
     func setCornerRadiusWith(radius: Float, borderWidth: Float, borderColor: UIColor) {
         self.layer.cornerRadius = CGFloat(radius)
         self.layer.borderWidth = CGFloat(borderWidth)
         self.layer.borderColor = borderColor.cgColor
         self.layer.masksToBounds = true
     }
+    ///
+    /// The extension is `fromNib` returns Nib of provided name
+    /// A View extension's `fromNib` method
     class func fromNib(named: String? = nil) -> Self {
         let name = named ?? "\(Self.self)"
         guard

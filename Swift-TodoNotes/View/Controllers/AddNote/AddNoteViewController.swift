@@ -5,85 +5,50 @@
 
 import UIKit
 
-enum NoteAction: String {
-    case add
-    case edit
-}
-
 class AddNoteViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
-
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var placeholderLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var headerLabel: UILabel!
-
+    
     // MARK: - Properties
-
     weak var delegate: NoteListDelegate?
     var noteAction: NoteAction = .add
     var note: Note?
-
+    
     // MARK: - View Lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setup()
     }
-
+    
+    // MARK: - Function
     fileprivate func setup() {
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-
+        // initColor
+        self.initColor()
+        // initText
+        self.initText()
+        self.setPlaceholder()
+        self.setDoneButton()
         view.bringSubviewToFront(self.containerView)
         self.containerView.cornerRadius(radius: 20)
-        // self.shadowView.addShadow(shadowColor: UIColor.appGray.cgColor, cornerRadius: 20)
         self.shadowView.isHidden = true
-        self.containerView.backgroundColor = .appSecondary
-        self.headerLabel.textColor = .white
-        self.textView.textColor = .white
-        self.placeholderLabel.textColor = .appGray
-        self.doneButton.setTitleColor(.appBlue, for: .normal)
-        self.textView.tintColor = .appBlue
-        
         self.textView.delegate = self
-
-        self.headerLabel.text = noteAction == .add ? "Add Note" : "Edit Note"
-
+    }
+    fileprivate func initText() {
+        self.headerLabel.text = noteAction == .add ? StringConstants.addNote : StringConstants.editNote
         if let note = note {
             self.textView.text = note.note_description
         }
-
-        self.setPlaceholder()
-        self.setDoneButton()
     }
-
-    fileprivate func initText() {
-
-    }
-
-    fileprivate func initFont() {
-
-    }
-
-    fileprivate func initColor() {
-        
-    }
-
-    // MARK: - Actions
-
-    @IBAction fileprivate func closeClicked(_ sender: UIButton) {
-        self.dismiss(animated: true)
-    }
-
-    @IBAction fileprivate func doneClicked(_ sender: UIButton) {
-        self.save()
-    }
-
-    // MARK: - Functions
-
+    ///
+    /// The func is `setPlaceholder`is managing textview placeholder
+    ///  A AddNoteViewController's `setPlaceholder` method
+    ///
     func setPlaceholder() {
         if let text = textView.text, text.count == 0 {
             self.placeholderLabel.isHidden = false
@@ -92,9 +57,12 @@ class AddNoteViewController: UIViewController {
         } else {
         }
     }
-
+    ///
+    /// The func is `setDoneButton`is managing Done button userInteraction & visibility
+    ///  A AddNoteViewController's `setDoneButton` method
+    ///
     func setDoneButton() {
-        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || textView.text == "Enter your text here" {
+        if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || textView.text == StringConstants.enterYourTextHere {
             self.doneButton.alpha = 0.5
             self.doneButton.isUserInteractionEnabled = false
         } else {
@@ -102,7 +70,10 @@ class AddNoteViewController: UIViewController {
             self.doneButton.isUserInteractionEnabled = true
         }
     }
-
+    ///
+    /// The func is `save`is used to save new / edited note
+    ///  A AddNoteViewController's `save` method
+    ///
     func save() {
         switch noteAction {
         case .add:
@@ -121,22 +92,13 @@ class AddNoteViewController: UIViewController {
             }
         }
     }
-}
-
-extension AddNoteViewController: UITextViewDelegate {
-    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-        setPlaceholder()
-        setDoneButton()
-        return true
+    
+    // MARK: - Actions
+    @IBAction fileprivate func closeClicked(_ sender: UIButton) {
+        self.dismiss(animated: true)
     }
-
-    func textViewDidChange(_ textView: UITextView) {
-        setPlaceholder()
-        setDoneButton()
-    }
-
-    func textViewDidEndEditing(_ textView: UITextView) {
-        setPlaceholder()
-        setDoneButton()
+    
+    @IBAction fileprivate func doneClicked(_ sender: UIButton) {
+        self.save()
     }
 }
