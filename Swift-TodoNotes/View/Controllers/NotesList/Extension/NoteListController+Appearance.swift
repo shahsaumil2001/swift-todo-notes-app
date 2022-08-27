@@ -11,7 +11,7 @@ extension NoteListController {
     ///  A NoteListController's `initFont` method
     ///
     func initFont() {
-        self.noDataLabel.font =  Font.medium.size(size: FontSize.header2.rawValue)
+        self.noDataLabel.font =  Font.medium.size(size: FontSize.header3.rawValue)
     }
     ///
     /// The func is `initColor`is set Color for component
@@ -19,7 +19,7 @@ extension NoteListController {
     ///
     func initColor() {
         self.view.backgroundColor = .appPrimary
-        self.noDataLabel.textColor = .white
+        self.noDataLabel.textColor = .appGray.withAlphaComponent(0.5)
         self.addButton.addShadow(shadowColor: UIColor.appWhite.withAlphaComponent(0.5).cgColor)
     }
     ///

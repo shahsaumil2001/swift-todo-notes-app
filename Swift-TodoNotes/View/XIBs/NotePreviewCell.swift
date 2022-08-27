@@ -41,7 +41,7 @@ class NotePreviewCell: UITableViewCell {
     ///  A NotePreviewCell's `setupData` method
     ///
     func setupData(note: Note) {
-        self.descriptionLabel.text = note.note_description
-        self.timeLabel.text = note.note_time?.toLocalDate()
+        self.descriptionLabel.text = note.noteDescription
+        self.timeLabel.text = note.noteTime?.toLocalDate()
     }
 }

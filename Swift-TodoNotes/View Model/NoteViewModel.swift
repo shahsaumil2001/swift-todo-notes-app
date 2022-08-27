@@ -28,7 +28,7 @@ class NoteListViewModel {
         if CoreDataManager.shared.fetchAllNotes() != nil {
             let notes = CoreDataManager.shared.fetchAllNotes()!
             self.notes = notes.sorted { object1, object2 in
-                return ((object1 as? Note)?.note_time)! > ((object2 as? Note)?.note_time)!
+                return ((object1 as? Note)?.noteTime)! > ((object2 as? Note)?.noteTime)!
             }
         }
         self.handleSuccess?()

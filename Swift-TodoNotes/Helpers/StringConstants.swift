@@ -9,8 +9,8 @@ import Foundation
 struct KeyConstants {
     static let notes = "notes"
     static let note = "Note"
-    static let noteDescription = "note_description"
-    static let noteTime = "note_time"
+    static let noteDescription = "noteDescription"
+    static let noteTime = "noteTime"
 }
 
 struct StringConstants {

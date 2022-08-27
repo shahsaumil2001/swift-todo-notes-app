@@ -42,7 +42,7 @@ class AddNoteViewController: UIViewController {
     fileprivate func initText() {
         self.headerLabel.text = noteAction == .add ? StringConstants.addNote : StringConstants.editNote
         if let note = note {
-            self.textView.text = note.note_description
+            self.textView.text = note.noteDescription
         }
     }
     ///
