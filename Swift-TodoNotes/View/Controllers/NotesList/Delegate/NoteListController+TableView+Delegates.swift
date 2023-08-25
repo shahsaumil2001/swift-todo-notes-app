@@ -30,3 +30,21 @@ extension NoteListController: UITableViewDataSource {
         return cell
     }
 }
+extension NoteListController: UITableViewDelegate {
+    ///
+    /// The func is `scrollViewDidScroll` is managing actions when table view will scroll
+    ///  A NoteListController's `scrollViewDidScroll` method
+    ///
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // if tableview's scroll position is not 0 then change navigation appearance
+        if (scrollView.contentOffset.y > 0) {
+            self.navigationController?.navigationBar.backgroundColor = UIColor.appPrimary
+            self.navigationController?.navigationBar.barTintColor = UIColor.appPrimary
+            let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.appWhite]
+            self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        } else {
+            self.navigationController?.navigationBar.backgroundColor = UIColor.clear
+            self.navigationController?.navigationBar.barTintColor = UIColor.clear
+        }
+    }
+}

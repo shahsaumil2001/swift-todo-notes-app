@@ -7,6 +7,8 @@ import UIKit
 
 class AddNoteViewController: UIViewController {
     
+    var onNoteEdited: Action?
+    
     // MARK: - IBOutlets
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var shadowView: UIView!
@@ -39,6 +41,10 @@ class AddNoteViewController: UIViewController {
         self.shadowView.isHidden = true
         self.textView.delegate = self
     }
+    ///
+    /// The func is `initText`is managing text of UI
+    ///  A AddNoteViewController's `initText` method
+    ///
     fileprivate func initText() {
         self.headerLabel.text = noteAction == .add ? StringConstants.addNote : StringConstants.editNote
         if let note = note {
@@ -79,16 +85,12 @@ class AddNoteViewController: UIViewController {
         case .add:
             let note = CoreDataManager.shared.insertNote(description: self.textView.text ?? "", time: Date())
             if note != nil {
-                self.dismiss(animated: true) {
-                    self.delegate?.noteEdited()
-                }
+                self.onNoteEdited?()
             }
         case .edit:
             if let note = note {
                 CoreDataManager.shared.update(description: self.textView.text ?? "", date: Date(), note: note)
-                self.dismiss(animated: true) {
-                    self.delegate?.noteEdited()
-                }
+                self.onNoteEdited?()
             }
         }
     }

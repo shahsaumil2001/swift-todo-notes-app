@@ -11,6 +11,9 @@ struct KeyConstants {
     static let note = "Note"
     static let noteDescription = "noteDescription"
     static let noteTime = "noteTime"
+    // Alert Keys
+    static let attributedMessage = "attributedMessage"
+    static let attributedTitle = "attributedTitle"
 }
 
 struct StringConstants {
@@ -18,6 +21,9 @@ struct StringConstants {
 
     // NoteListController
     static let noNotesAreAvailable = "No notes are available!"
+    static let areYouSureYouWantToDeleteNote = "Are you sure you want to delete note?"
+    static let continueText = "Continue"
+    static let cancel = "Cancel"
 
     // AddNoteViewController
     static let addNote = "Add Note"

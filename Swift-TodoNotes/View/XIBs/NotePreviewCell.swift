@@ -25,16 +25,24 @@ class NotePreviewCell: UITableViewCell {
     }
 
     // MARK: - Function
+    ///
+    /// The func is `initFont`is set Font for component
+    ///  A NotePreviewCell's `initFont` method
+    ///
     fileprivate func initFont() {
         self.descriptionLabel.font = Font.medium.size(size: FontSize.body.rawValue)
         self.timeLabel.font = Font.regular.size(size: FontSize.small.rawValue)
     }
+    ///
+    /// The func is `initColor`is set Color for component
+    ///  A NotePreviewCell's `initColor` method
+    ///
     fileprivate func initColor() {
         self.mainView.backgroundColor = .appSecondary
         self.descriptionLabel.textColor = .appWhite
         self.timeLabel.textColor = .appGray
         self.editButton.imageView?.image?.withRenderingMode(.alwaysTemplate).withTintColor(.appBlue)
-        self.deleteButton.imageView?.image?.withRenderingMode(.alwaysTemplate).withTintColor(.appBlue)
+        self.deleteButton.imageView?.image?.withRenderingMode(.alwaysTemplate).withTintColor(.appRed)
     }
     ///
     /// The func is `setupData`which is setting Data of Note

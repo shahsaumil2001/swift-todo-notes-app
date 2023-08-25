@@ -22,8 +22,18 @@ extension UIColor {
         return UIColor.rgb(fromHex: color)
     }
 
+    class var appLightGray: UIColor {
+        let color = 0x242424
+        return UIColor.rgb(fromHex: color)
+    }
+
     class var appBlue: UIColor {
         let color = 0x0983FD
+        return UIColor.rgb(fromHex: color)
+    }
+
+    class var appRed: UIColor {
+        let color = 0xFF3B30
         return UIColor.rgb(fromHex: color)
     }
 

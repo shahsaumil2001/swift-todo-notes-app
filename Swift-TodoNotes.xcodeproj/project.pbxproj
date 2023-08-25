@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		25D3CAEDD873C1E92E885218 /* Pods_Swift_TodoNotesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84CD9640690AA0B8293BDAF4 /* Pods_Swift_TodoNotesTests.framework */; };
 		70CBFC9677A63008772D883E /* Pods_Swift_TodoNotes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE67D64BB4BE566B70B46204 /* Pods_Swift_TodoNotes.framework */; };
+		8E16FD962A95DA2C00992470 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16FD952A95DA2B00992470 /* Coordinator.swift */; };
+		8E16FD982A95DE0C00992470 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16FD972A95DE0C00992470 /* Actions.swift */; };
+		8E16FD9A2A95DE3000992470 /* MainAppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16FD992A95DE3000992470 /* MainAppCoordinator.swift */; };
+		8E16FD9C2A95DF1500992470 /* NotesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E16FD9B2A95DF1500992470 /* NotesCoordinator.swift */; };
 		8E5C0892288ED0C80050AF45 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5C0891288ED0C80050AF45 /* Note.swift */; };
 		8EA56E7C288FA5BE0090D0A2 /* NoteListController+TableView+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA56E7B288FA5BE0090D0A2 /* NoteListController+TableView+Delegates.swift */; };
 		8EA56E7E288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA56E7D288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift */; };
@@ -67,6 +71,10 @@
 		430918D381696A45A71BE280 /* Pods-Swift-TodoNotes-Swift-TodoNotesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-TodoNotes-Swift-TodoNotesUITests.release.xcconfig"; path = "Target Support Files/Pods-Swift-TodoNotes-Swift-TodoNotesUITests/Pods-Swift-TodoNotes-Swift-TodoNotesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		51653EF525C755AF350BAFA6 /* Pods_Swift_TodoNotes_Swift_TodoNotesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_TodoNotes_Swift_TodoNotesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CD9640690AA0B8293BDAF4 /* Pods_Swift_TodoNotesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_TodoNotesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E16FD952A95DA2B00992470 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		8E16FD972A95DE0C00992470 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		8E16FD992A95DE3000992470 /* MainAppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAppCoordinator.swift; sourceTree = "<group>"; };
+		8E16FD9B2A95DF1500992470 /* NotesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCoordinator.swift; sourceTree = "<group>"; };
 		8E5845FA2832D4FD00E4CAD3 /* Swift-TodoNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-TodoNotes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E5846102832D4FE00E4CAD3 /* Swift-TodoNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-TodoNotesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E58461A2832D4FE00E4CAD3 /* Swift-TodoNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swift-TodoNotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -149,6 +157,16 @@
 				35507756FCBD2871CCE677B0 /* Pods-Swift-TodoNotesTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E16FD942A95DA1600992470 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				8E16FD952A95DA2B00992470 /* Coordinator.swift */,
+				8E16FD992A95DE3000992470 /* MainAppCoordinator.swift */,
+				8E16FD9B2A95DF1500992470 /* NotesCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		8E5845F12832D4FD00E4CAD3 = {
@@ -236,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				B9DED7AA288988F9008F8774 /* Swift-TodoNotes.entitlements */,
+				8E16FD942A95DA1600992470 /* Coordinators */,
 				8E5C0890288ED0BC0050AF45 /* Model */,
 				B9DED7CB288988F9008F8774 /* View Model */,
 				B9DED7B5288988F9008F8774 /* notes.xcdatamodeld */,
@@ -336,6 +355,7 @@
 				B9DED7CF288988F9008F8774 /* StringConstants.swift */,
 				B9DED7D0288988F9008F8774 /* Storyboard.swift */,
 				8EA56E84288FB7340090D0A2 /* Enumeration.swift */,
+				8E16FD972A95DE0C00992470 /* Actions.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -605,6 +625,8 @@
 				8EA56E7C288FA5BE0090D0A2 /* NoteListController+TableView+Delegates.swift in Sources */,
 				B9DED7EA288988FA008F8774 /* CoreDataManager.swift in Sources */,
 				8E5C0892288ED0C80050AF45 /* Note.swift in Sources */,
+				8E16FD982A95DE0C00992470 /* Actions.swift in Sources */,
+				8E16FD9A2A95DE3000992470 /* MainAppCoordinator.swift in Sources */,
 				8EA56E83288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift in Sources */,
 				B9DED7EB288988FA008F8774 /* StringConstants.swift in Sources */,
 				B9DED7E2288988FA008F8774 /* UIColor+CustomColor.swift in Sources */,
@@ -613,6 +635,8 @@
 				B9DED7E1288988F9008F8774 /* UIView+Extension.swift in Sources */,
 				B9DED7E8288988FA008F8774 /* AppDelegate.swift in Sources */,
 				8EA56E7E288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift in Sources */,
+				8E16FD962A95DA2C00992470 /* Coordinator.swift in Sources */,
+				8E16FD9C2A95DF1500992470 /* NotesCoordinator.swift in Sources */,
 				B9DED7E7288988FA008F8774 /* AddNoteViewController.swift in Sources */,
 				B9DED7E0288988F9008F8774 /* Date+Extension.swift in Sources */,
 				B9DED7DC288988F9008F8774 /* notes.xcdatamodeld in Sources */,
