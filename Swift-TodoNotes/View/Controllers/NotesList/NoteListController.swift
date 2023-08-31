@@ -42,8 +42,6 @@ class NoteListController: UIViewController {
         self.initText()
         // Setup TebleView
         self.setupTableView()
-        // Setup Navigation
-        self.setupNavigation()
         // Init ViewModel
         self.initViewModel()
         self.noDataLabel.isHidden = true
@@ -64,7 +62,6 @@ class NoteListController: UIViewController {
         let nib = UINib(nibName: NotePreviewCell.staticIdentifier, bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: NotePreviewCell.staticIdentifier)
         self.tableView.dataSource = self
-        self.tableView.delegate = self
     }
     ///
     /// The func is `initViewModel`is managing API Callbacks
@@ -91,11 +88,18 @@ class NoteListController: UIViewController {
             let notToEdit = self.notesVM.getNote(indexPath)
             self.onEditNote?(notToEdit)
         case .delete:
-            let indexPath = IndexPath(row: row, section: 0)
-            self.tableView.beginUpdates()
-            self.tableView.deleteRows(at: [indexPath], with: .left)
-            CoreDataManager.shared.delete(note: self.notesVM.notes[indexPath.row] as? Note ?? Note())
-            self.notesVM.notes.remove(at: indexPath.row)
+            self.deleteNote(row: row)
+        }
+    }
+    ///
+    /// The func is `deleteNote`is deleting note
+    ///  A NoteListController's `deleteNote` method
+    ///
+    fileprivate func deleteNote(row: Int) {
+        let indexPath = IndexPath(row: row, section: 0)
+        self.tableView.beginUpdates()
+        self.tableView.deleteRows(at: [indexPath], with: .left)
+        self.notesVM.deleteNote(indexToRemove: indexPath.row) { isSuccess in
             self.tableView.endUpdates()
             self.noDataLabel.isHidden = self.notesVM.notes.count > 0 ? true : false
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -108,21 +112,10 @@ class NoteListController: UIViewController {
     ///  A NoteListController's `confirmationPopup` method
     ///
     fileprivate func confirmationPopup(row: Int) {
-        let alert = UIAlertController(title: StringConstants.myNotes, message: StringConstants.areYouSureYouWantToDeleteNote, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: StringConstants.cancel, style: UIAlertAction.Style.destructive, handler: nil))
-        alert.addAction(UIAlertAction(title: StringConstants.continueText, style: UIAlertAction.Style.default, handler: {_ in
+        self.showAlert(message: StringConstants.areYouSureYouWantToDeleteNote, okButtonText: StringConstants.continueText) { _ in
             // Delete Note
             self.handleCRUD(actionType: .delete, row: row)
-        }))
-        // Accessing alert view backgroundColor :
-        alert.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = .appLightGray
-        // Set title color
-        alert.setValue(NSAttributedString(string: alert.title!, attributes: [NSAttributedString.Key.foregroundColor : UIColor.appWhite]), forKey: KeyConstants.attributedTitle)
-        // Set message color
-        alert.setValue(NSAttributedString(string: alert.message ?? "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.appWhite]), forKey: KeyConstants.attributedMessage)
-
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
+        }
     }
     
     // MARK: - Actions

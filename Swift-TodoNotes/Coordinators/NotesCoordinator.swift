@@ -14,10 +14,11 @@ final class NotesCoordinator: Coordinator {
 
     init(rootNavigationController: UINavigationController) {
         self.rootNavigationController = rootNavigationController
-        self.rootNavigationController.navigationBar.backgroundColor = UIColor.appPrimary
-        self.rootNavigationController.navigationBar.barTintColor = UIColor.appPrimary
-        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.appWhite]
-        self.rootNavigationController.navigationBar.titleTextAttributes = textAttributes
+        // Navigation Configuration
+        self.rootNavigationController.navigationBar.prefersLargeTitles = true
+        self.rootNavigationController.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appWhite, NSAttributedString.Key.font: Font.bold.size(size: FontSize.large1.rawValue)]
+        self.rootNavigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appWhite,
+            NSAttributedString.Key.font: Font.bold.size(size: FontSize.body.rawValue)]
     }
 
     func start() {

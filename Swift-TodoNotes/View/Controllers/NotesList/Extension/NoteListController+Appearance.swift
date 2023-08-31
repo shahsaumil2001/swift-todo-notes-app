@@ -22,16 +22,4 @@ extension NoteListController {
         self.noDataLabel.textColor = .appGray.withAlphaComponent(0.5)
         self.addButton.addShadow(shadowColor: UIColor.appWhite.withAlphaComponent(0.5).cgColor)
     }
-    ///
-    /// The func is `setupNavigation`is set navigation 
-    ///  A NoteListController's `setupNavigation` method
-    ///
-    func setupNavigation() {
-        self.navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.largeTitleTextAttributes =
-        [NSAttributedString.Key.foregroundColor: UIColor.appWhite,
-         NSAttributedString.Key.font: Font.bold.size(size: FontSize.large1.rawValue)]
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.appPrimary,
-                                                                   NSAttributedString.Key.font: Font.bold.size(size: FontSize.body.rawValue)]
-    }
 }

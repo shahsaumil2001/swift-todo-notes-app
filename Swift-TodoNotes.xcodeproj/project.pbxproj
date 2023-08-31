@@ -21,6 +21,8 @@
 		8EAF9B6128911A4B00016F9A /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF9B6028911A4B00016F9A /* UIApplication+Extension.swift */; };
 		8EAF9BDB2891700A00016F9A /* NoteListController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF9BDA2891700A00016F9A /* NoteListController+Appearance.swift */; };
 		8EAF9BDE2891706400016F9A /* AddNoteViewController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF9BDD2891706400016F9A /* AddNoteViewController+Appearance.swift */; };
+		8EC25DA12A98D7330064F17F /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC25DA02A98D7330064F17F /* UIViewController+Extension.swift */; };
+		8EC25DA42A98E2440064F17F /* AddNoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC25DA32A98E2440064F17F /* AddNoteViewModel.swift */; };
 		B9DED7D4288988F9008F8774 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DED7AC288988F9008F8774 /* Colors.xcassets */; };
 		B9DED7D5288988F9008F8774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9DED7AD288988F9008F8774 /* Assets.xcassets */; };
 		B9DED7D6288988F9008F8774 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B9DED7AF288988F9008F8774 /* Montserrat-Medium.ttf */; };
@@ -86,6 +88,8 @@
 		8EAF9B6028911A4B00016F9A /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		8EAF9BDA2891700A00016F9A /* NoteListController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteListController+Appearance.swift"; sourceTree = "<group>"; };
 		8EAF9BDD2891706400016F9A /* AddNoteViewController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNoteViewController+Appearance.swift"; sourceTree = "<group>"; };
+		8EC25DA02A98D7330064F17F /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		8EC25DA32A98E2440064F17F /* AddNoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewModel.swift; sourceTree = "<group>"; };
 		9590D22F6D387BB2EE75446E /* Pods-Swift-TodoNotes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-TodoNotes.release.xcconfig"; path = "Target Support Files/Pods-Swift-TodoNotes/Pods-Swift-TodoNotes.release.xcconfig"; sourceTree = "<group>"; };
 		AEDF4337B9944747B633F21A /* Pods-Swift-TodoNotesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-TodoNotesTests.debug.xcconfig"; path = "Target Support Files/Pods-Swift-TodoNotesTests/Pods-Swift-TodoNotesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9DED7AA288988F9008F8774 /* Swift-TodoNotes.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "Swift-TodoNotes.entitlements"; sourceTree = "<group>"; };
@@ -250,6 +254,22 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		8EC25DA22A98E2390064F17F /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				8EC25DA32A98E2440064F17F /* AddNoteViewModel.swift */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		8EC25DA52A98E24C0064F17F /* NotesList */ = {
+			isa = PBXGroup;
+			children = (
+				B9DED7CC288988F9008F8774 /* NoteViewModel.swift */,
+			);
+			path = NotesList;
+			sourceTree = "<group>";
+		};
 		B9DED7A9288988F9008F8774 /* Swift-TodoNotes */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +338,7 @@
 				B9DED7C0288988F9008F8774 /* UIColor+CustomColor.swift */,
 				B9DED7C1288988F9008F8774 /* UITextView+Extension.swift */,
 				8EAF9B6028911A4B00016F9A /* UIApplication+Extension.swift */,
+				8EC25DA02A98D7330064F17F /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -343,7 +364,8 @@
 		B9DED7CB288988F9008F8774 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				B9DED7CC288988F9008F8774 /* NoteViewModel.swift */,
+				8EC25DA22A98E2390064F17F /* AddNote */,
+				8EC25DA52A98E24C0064F17F /* NotesList */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -616,6 +638,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC25DA42A98E2440064F17F /* AddNoteViewModel.swift in Sources */,
+				8EC25DA12A98D7330064F17F /* UIViewController+Extension.swift in Sources */,
 				B9DED7E9288988FA008F8774 /* NoteViewModel.swift in Sources */,
 				B9DED7E6288988FA008F8774 /* NoteListController.swift in Sources */,
 				B9DED7DF288988F9008F8774 /* UIFont+Extension.swift in Sources */,

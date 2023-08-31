@@ -9,7 +9,7 @@ import UIKit
 extension UIApplication {
     ///
     /// The func is `topViewController` which is used to get topViewController
-    ///  A UBHomeViewController's `topViewController` method
+    ///  A UIApplication extension's `topViewController` method
     ///
     class func topViewController(base: UIViewController? = UIApplication.shared.windows[0].rootViewController) -> UIViewController? {
         if let nav = base as? UINavigationController {

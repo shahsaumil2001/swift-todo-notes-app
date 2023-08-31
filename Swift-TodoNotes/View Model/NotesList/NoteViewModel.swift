@@ -5,12 +5,12 @@
 
 import CoreData
 
+typealias GenericCompletion = (_ isSuccess: Bool) -> Void
 class NoteListViewModel {
 
     // MARK: - Properties
     var notes: [NSManagedObject] = []
     var handleSuccess: (() -> Void)?
-
     var numberOfRows: Int {
         return self.notes.count
     }
@@ -55,5 +55,16 @@ class NoteListViewModel {
             print("Could not fetch. \(error), \(error.userInfo)")
             return nil
         }
+    }
+    ///
+    /// The func is `deleteNote` which will delete Note from CoreData
+    ///  A NoteListViewModel's `deleteNote` method
+    ///
+    func deleteNote(indexToRemove: Int, completion: @escaping GenericCompletion) {
+        // Delete Note from CoreData
+        CoreDataManager.shared.delete(note: self.notes[indexToRemove] as? Note ?? Note())
+        // Remove Note from local array
+        self.notes.remove(at: indexToRemove)
+        completion(true)
     }
 }

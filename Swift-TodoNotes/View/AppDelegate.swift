@@ -38,6 +38,8 @@ extension AppDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = appCoordinator.rootNavigationController
         window?.makeKeyAndVisible()
+        // Apply Dark theme
+        window?.overrideUserInterfaceStyle = .dark
         // Start main coordinator for navigation
         appCoordinator.start()
     }

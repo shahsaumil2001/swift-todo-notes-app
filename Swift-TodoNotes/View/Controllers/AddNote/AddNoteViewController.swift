@@ -18,6 +18,7 @@ class AddNoteViewController: UIViewController {
     @IBOutlet weak var headerLabel: UILabel!
     
     // MARK: - Properties
+    let addNoteVM = AddNoteViewModel()
     weak var delegate: NoteListDelegate?
     var noteAction: NoteAction = .add
     var note: Note?
@@ -83,13 +84,12 @@ class AddNoteViewController: UIViewController {
     func save() {
         switch noteAction {
         case .add:
-            let note = CoreDataManager.shared.insertNote(description: self.textView.text ?? "", time: Date())
-            if note != nil {
+            self.addNoteVM.addNote(noteText: self.textView.text ?? "") { note in
                 self.onNoteEdited?()
             }
         case .edit:
             if let note = note {
-                CoreDataManager.shared.update(description: self.textView.text ?? "", date: Date(), note: note)
+                self.addNoteVM.updateNote(noteText: self.textView.text ?? "", note: note)
                 self.onNoteEdited?()
             }
         }
