@@ -58,7 +58,7 @@ class CoreDataManager {
             try managedContext.save()
             return note as? Note
         } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
+            debugPrint("Could not save. \(error), \(error.userInfo)")
             return nil
         }
     }
@@ -78,9 +78,9 @@ class CoreDataManager {
          */
         do {
             try context.save()
-            print("saved!")
+            debugPrint("saved!")
         } catch let error as NSError {
-            print("Could not save \(error), \(error.userInfo)")
+            debugPrint("Could not save \(error), \(error.userInfo)")
         } catch {
         }
     }
@@ -114,7 +114,7 @@ class CoreDataManager {
             let note = try managedContext.fetch(fetchRequest)
             return note as? [Note]
         } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            debugPrint("Could not fetch. \(error), \(error.userInfo)")
             return nil
         }
     }
@@ -150,7 +150,7 @@ class CoreDataManager {
             }
             return arrRemoevedNotes
         } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            debugPrint("Could not fetch. \(error), \(error.userInfo)")
             return nil
         }
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -30,8 +30,8 @@
                                 <rect key="frame" x="0.0" y="47" width="390" height="797"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8c-7X-AED">
-                                <rect key="frame" x="174" y="411.66666666666669" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M8c-7X-AED">
+                                <rect key="frame" x="20" y="422" width="350" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,10 +54,11 @@
                         <constraints>
                             <constraint firstItem="a9h-qc-fL9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Yo-Ya-Q5l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="a9h-qc-fL9" secondAttribute="trailing" id="9Ha-0L-9VB"/>
-                            <constraint firstItem="M8c-7X-AED" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9nf-tn-uj4"/>
                             <constraint firstAttribute="bottom" secondItem="a9h-qc-fL9" secondAttribute="bottom" id="UjT-Sh-fdF"/>
+                            <constraint firstItem="M8c-7X-AED" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VFo-YR-CiX"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="D24-ji-fRV" secondAttribute="bottom" constant="40" id="W0g-DV-qZ0"/>
                             <constraint firstItem="a9h-qc-fL9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WCD-Wc-XCB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M8c-7X-AED" secondAttribute="trailing" constant="20" id="bsH-Rm-D2e"/>
                             <constraint firstItem="M8c-7X-AED" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cY1-Lt-uLR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D24-ji-fRV" secondAttribute="trailing" constant="20" id="h5g-dv-DxX"/>
                         </constraints>
@@ -208,7 +209,7 @@
             <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

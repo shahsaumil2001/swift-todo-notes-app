@@ -28,7 +28,7 @@ class NoteListViewModel {
         if CoreDataManager.shared.fetchAllNotes() != nil {
             let notes = CoreDataManager.shared.fetchAllNotes()!
             self.notes = notes.sorted { object1, object2 in
-                return ((object1 as? Note)?.noteTime)! > ((object2 as? Note)?.noteTime)!
+                return ((object1).noteTime ?? Date()) > ((object2).noteTime ?? Date())
             }
         }
         self.handleSuccess?()
@@ -52,7 +52,7 @@ class NoteListViewModel {
             let notes = try managedContext.fetch(fetchRequest)
             return notes as? [Note]
         } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
+            debugPrint("Could not fetch. \(error), \(error.userInfo)")
             return nil
         }
     }

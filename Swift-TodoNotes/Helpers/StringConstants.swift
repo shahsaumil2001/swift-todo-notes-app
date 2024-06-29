@@ -20,7 +20,7 @@ struct StringConstants {
     static let myNotes = "My Notes"
 
     // NoteListController
-    static let noNotesAreAvailable = "No notes are available!"
+    static let noNotesAreAvailable = "No note has been added yet. Please start creating your first note!"
     static let areYouSureYouWantToDeleteNote = "Are you sure you want to delete note?"
     static let continueText = "Continue"
     static let cancel = "Cancel"

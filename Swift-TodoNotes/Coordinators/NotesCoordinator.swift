@@ -48,7 +48,7 @@ final class NotesCoordinator: Coordinator {
             controller?.note = note
             controller?.delegate = UIApplication.topViewController() as? any NoteListDelegate
         case .delete:
-            print("")
+            debugPrint("")
         }
         controller?.onNoteEdited = { [weak self] in
             controller?.delegate?.noteEdited()
