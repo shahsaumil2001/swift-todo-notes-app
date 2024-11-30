@@ -18,6 +18,11 @@
 		8EA56E7E288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA56E7D288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift */; };
 		8EA56E83288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA56E82288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift */; };
 		8EA56E85288FB7340090D0A2 /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA56E84288FB7340090D0A2 /* Enumeration.swift */; };
+		8EA933042CF982A200644138 /* SwiftTodoNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA932E12CF981CD00644138 /* SwiftTodoNotesTests.swift */; };
+		8EA9330C2CF9835A00644138 /* Swift_TodoNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA933062CF9835A00644138 /* Swift_TodoNotesUITests.swift */; };
+		8EA9330D2CF9835A00644138 /* Swift_TodoNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA933072CF9835A00644138 /* Swift_TodoNotesUITestsLaunchTests.swift */; };
+		8EA933112CF983F800644138 /* AddNoteVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA9330F2CF983F800644138 /* AddNoteVCTests.swift */; };
+		8EA933142CF992A000644138 /* NotesListVcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EA933132CF9929B00644138 /* NotesListVcTests.swift */; };
 		8EAF9B6128911A4B00016F9A /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF9B6028911A4B00016F9A /* UIApplication+Extension.swift */; };
 		8EAF9BDB2891700A00016F9A /* NoteListController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF9BDA2891700A00016F9A /* NoteListController+Appearance.swift */; };
 		8EAF9BDE2891706400016F9A /* AddNoteViewController+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EAF9BDD2891706400016F9A /* AddNoteViewController+Appearance.swift */; };
@@ -85,6 +90,12 @@
 		8EA56E7D288FA7040090D0A2 /* NoteListController+AddNote+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteListController+AddNote+Delegates.swift"; sourceTree = "<group>"; };
 		8EA56E82288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNoteViewController+TextView+Delegates.swift"; sourceTree = "<group>"; };
 		8EA56E84288FB7340090D0A2 /* Enumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
+		8EA932E12CF981CD00644138 /* SwiftTodoNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTodoNotesTests.swift; sourceTree = "<group>"; };
+		8EA933062CF9835A00644138 /* Swift_TodoNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_TodoNotesUITests.swift; sourceTree = "<group>"; };
+		8EA933072CF9835A00644138 /* Swift_TodoNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift_TodoNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EA9330E2CF9835C00644138 /* Swift-TodoNotesUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-TodoNotesUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		8EA9330F2CF983F800644138 /* AddNoteVCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteVCTests.swift; sourceTree = "<group>"; };
+		8EA933132CF9929B00644138 /* NotesListVcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListVcTests.swift; sourceTree = "<group>"; };
 		8EAF9B6028911A4B00016F9A /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		8EAF9BDA2891700A00016F9A /* NoteListController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteListController+Appearance.swift"; sourceTree = "<group>"; };
 		8EAF9BDD2891706400016F9A /* AddNoteViewController+Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddNoteViewController+Appearance.swift"; sourceTree = "<group>"; };
@@ -180,6 +191,8 @@
 				8E5845FB2832D4FD00E4CAD3 /* Products */,
 				01C258BA05CC4E30871DF6B6 /* Pods */,
 				FC8434B4096B8CFE7575C839 /* Frameworks */,
+				8EA932E02CF981C400644138 /* Swift-TodoNotesTests */,
+				8EA933052CF9831300644138 /* Swift-TodoNotesUITests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -236,6 +249,42 @@
 				8EA56E82288FAB100090D0A2 /* AddNoteViewController+TextView+Delegates.swift */,
 			);
 			path = Delegate;
+			sourceTree = "<group>";
+		};
+		8EA932E02CF981C400644138 /* Swift-TodoNotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				8EA933122CF9929200644138 /* NotesList */,
+				8EA933102CF983F800644138 /* AddNote */,
+				8EA932E12CF981CD00644138 /* SwiftTodoNotesTests.swift */,
+			);
+			path = "Swift-TodoNotesTests";
+			sourceTree = "<group>";
+		};
+		8EA933052CF9831300644138 /* Swift-TodoNotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8EA933062CF9835A00644138 /* Swift_TodoNotesUITests.swift */,
+				8EA933072CF9835A00644138 /* Swift_TodoNotesUITestsLaunchTests.swift */,
+				8EA9330E2CF9835C00644138 /* Swift-TodoNotesUITests-Bridging-Header.h */,
+			);
+			path = "Swift-TodoNotesUITests";
+			sourceTree = "<group>";
+		};
+		8EA933102CF983F800644138 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				8EA9330F2CF983F800644138 /* AddNoteVCTests.swift */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		8EA933122CF9929200644138 /* NotesList */ = {
+			isa = PBXGroup;
+			children = (
+				8EA933132CF9929B00644138 /* NotesListVcTests.swift */,
+			);
+			path = NotesList;
 			sourceTree = "<group>";
 		};
 		8EAF9BD928916FE000016F9A /* Extension */ = {
@@ -472,6 +521,7 @@
 					};
 					8E5846192832D4FE00E4CAD3 = {
 						CreatedOnToolsVersion = 13.0;
+						LastSwiftMigration = 1600;
 						TestTargetID = 8E5845F92832D4FD00E4CAD3;
 					};
 				};
@@ -673,6 +723,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA933142CF992A000644138 /* NotesListVcTests.swift in Sources */,
+				8EA933112CF983F800644138 /* AddNoteVCTests.swift in Sources */,
+				8EA933042CF982A200644138 /* SwiftTodoNotesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,6 +733,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EA9330C2CF9835A00644138 /* Swift_TodoNotesUITests.swift in Sources */,
+				8EA9330D2CF9835A00644138 /* Swift_TodoNotesUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -961,6 +1016,7 @@
 			baseConfigurationReference = 2DC0FD568114E53ABEFBACFA /* Pods-Swift-TodoNotes-Swift-TodoNotesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -973,6 +1029,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift-TodoNotesUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-TodoNotesUITests/Swift-TodoNotesUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Swift-TodoNotes";
@@ -984,6 +1042,7 @@
 			baseConfigurationReference = 430918D381696A45A71BE280 /* Pods-Swift-TodoNotes-Swift-TodoNotesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -996,6 +1055,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Swift-TodoNotesUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Swift-TodoNotesUITests/Swift-TodoNotesUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Swift-TodoNotes";
